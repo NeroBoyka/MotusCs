@@ -9,7 +9,7 @@ namespace Motus
             //Console.WriteLine(GetMot(5));
         }
 
-        static void AfficherCouleur(String texte, ConsoleColor couleur)
+        static void AfficherCouleur(char texte, ConsoleColor couleur)
         {
             Console.ForegroundColor = couleur;
             Console.Write(texte);
@@ -37,5 +37,43 @@ namespace Motus
 
             return randomValue;
         }
+
+        static List<string> ChargerMots(String fileName)
+        {
+            string mots = File.ReadAllText(fileName);
+            List<string> listeMots = mots.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Where(mot => mot.Length >= 6 && mot.Length <= 8).ToList();
+
+            return listeMots;
+        }
+
+        static String ChoisirMot(List<String> mots)
+        {
+            return mots[GetNombreAleatoire(0, mots.Count)];
+        }
+
+        static void TestMot(String motCache, String motSaisie)
+        {
+            for (int i = 0; i < motCache.Length; i++)
+            {
+                if (motSaisie[i] == motCache[i])
+                {
+                    AfficherCouleur(motSaisie[i], ConsoleColor.Red);
+                }
+                else
+                {
+                    if (motCache.Contains(motSaisie[i]))
+                    {
+                        AfficherCouleur(motSaisie[i], ConsoleColor.Yellow);
+                    }
+                    else
+                    {
+                        Console.Write(motSaisie[i]);
+                    }
+                }
+            }
+            Console.WriteLine();
+        }
+
+
     }
 }
