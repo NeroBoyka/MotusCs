@@ -1,4 +1,6 @@
-﻿namespace Motus
+﻿using System.Text;
+
+namespace Motus
 {
     internal class Program
     {
@@ -19,13 +21,21 @@
         {
             string inputWord = "";
 
-            while (inputWord.Length < lenMot)
+            while (inputWord.Length != lenMot)
             {
                 Console.WriteLine("Entrez un mot de " + lenMot + " caracteres: ");
-                inputWord = Console.ReadLine();
+                inputWord = Console.ReadLine().ToLower();
             }
 
             return inputWord;
+        }
+
+        static int GetNombreAleatoire(int min, int max)
+        {
+            Random rand = new Random();
+            int randomValue = rand.Next(min, max);
+
+            return randomValue;
         }
     }
 }

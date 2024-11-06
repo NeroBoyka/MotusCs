@@ -13,3 +13,4 @@ D:\univ\ipi\Framework C#\MotusCs\Motus\obj\Debug\net8.0\refint\Motus.dll
 D:\univ\ipi\Framework C#\MotusCs\Motus\obj\Debug\net8.0\Motus.pdb
 D:\univ\ipi\Framework C#\MotusCs\Motus\obj\Debug\net8.0\Motus.genruntimeconfig.cache
 D:\univ\ipi\Framework C#\MotusCs\Motus\obj\Debug\net8.0\ref\Motus.dll
+D:\univ\ipi\Framework C#\MotusCs\Motus\bin\Debug\net8.0\mot.txt
