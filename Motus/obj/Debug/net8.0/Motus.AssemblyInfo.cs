@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Motus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a25b7cea6621680473be5c2bf490cc96a3991ba0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9db56edabe83b7446b4e2835c170fd0928f6d6b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Motus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Motus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

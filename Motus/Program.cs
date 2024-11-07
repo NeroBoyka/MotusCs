@@ -16,7 +16,7 @@ namespace Motus
                 string motCache = ChoisirMot(listeMots).ToUpper();
                 int tailleMotCache = motCache.Length;
 
-                //Console.WriteLine(motCache); // pour test
+                Console.WriteLine(motCache); // pour test
 
                 Console.WriteLine($"Le mot caché contient {tailleMotCache} caractères et commence par {motCache[0]}\n");
 
@@ -74,13 +74,14 @@ namespace Motus
 
         static String GetMot(int lenMot)
         {
-            string inputWord = "";
+            string inputWord;
 
-            while (inputWord.Length != lenMot)
+            do
             {
-                Console.WriteLine("Entrez un mot de " + lenMot + " caractères: ");
+                Console.Write("Entrez un mot de " + lenMot + " caractères: ");
                 inputWord = Console.ReadLine().ToUpper();
             }
+            while (inputWord.Length != lenMot);
 
             return inputWord;
         }
